@@ -1,0 +1,14 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Minimalist Hexagonal Nut Core -->
+  <path d="M128 32L211.138 80V176L128 224L44.8615 176V80L128 32Z" stroke="#facc15" stroke-width="12" stroke-linejoin="round"/>
+  
+  <!-- Central Tech Core -->
+  <circle cx="128" cy="128" r="40" stroke="#facc15" stroke-width="8"/>
+  <circle cx="128" cy="128" r="15" fill="#facc15"/>
+  
+  <!-- Tech Circuit Accents -->
+  <path d="M128 32V64M128 192V224M44.8615 80H76.8615M179.138 80H211.138M44.8615 176H76.8615M179.138 176H211.138" stroke="#facc15" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Subtle Glow or Inner Detail -->
+  <path d="M90 128L105 113M166 128L151 143" stroke="#facc15" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+</svg>

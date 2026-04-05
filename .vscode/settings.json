@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.json": "jsonc",
+        "*.is": "ingotscript",
+        "time.h": "c"
+    }
+}
