@@ -1,0 +1,73 @@
+{
+  "name": "nutzip",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "NutZip - A powerful and beautiful compression software by Squ4sh000",
+  "main": "dist-electron/main.js",
+  "author": "Squ4sh000",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && electron-builder",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
+    "backend:build": "gcc -O3 backend/src/main.c backend/src/nutz.c -o backend/nutzip.exe -municode -lz"
+  },
+  "build": {
+    "appId": "com.squ4sh000.nutzip",
+    "productName": "NutZip",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist",
+      "dist-electron",
+      "assets",
+      "backend/nutzip.exe"
+    ],
+    "win": {
+      "icon": "assets/nut-icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "NutZip",
+      "installerIcon": "assets/nut-icon.ico",
+      "uninstallerIcon": "assets/nut-icon.ico",
+      "installerHeaderIcon": "assets/nut-icon.ico"
+    }
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.363.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "concurrently": "^8.2.2",
+    "electron": "^29.1.6",
+    "electron-builder": "^24.13.3",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.2",
+    "vite-plugin-electron": "^0.28.4",
+    "vite-plugin-electron-renderer": "^0.14.5",
+    "wait-on": "^7.2.0"
+  }
+}
